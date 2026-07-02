@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ananya! ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- PREMIUM CINEMATIC THEME --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b0f19;
+            color: #fff;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(at 10% 20%, rgba(255, 188, 0, 0.08) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, rgba(255, 53, 127, 0.08) 0px, transparent 50%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffbc00;
+            border-radius: 10px;
+        }
+
+        /* --- STICKY GLASSMORPHIC NAVBAR --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .logo {
+            font-family: 'Glass Antiqua', cursive;
+            font-size: 1.8rem;
+            color: #ffbc00;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #ffbc00;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            color: #ffbc00;
+        }
+
+        /* --- HERO LUXURY BANNER --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .hero-glow-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+            max-width: 800px;
+            width: 100%;
+            backdrop-filter: blur(20px);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffbc00, #ff5e62);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .hero h3 {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+        }
+        .btn-premium {
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #ffbc00, #ff7b00);
+            border: none;
+            border-radius: 50px;
+            color: #0b0f19;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(255, 188, 0, 0.3);
+            transition: all 0.3s;
+        }
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 188, 0, 0.5);
+        }
+
+        /* --- 3D INTERACTIVE MEMORY SHOWCASE --- */
+        .showcase-section {
+            padding: 100px 8%;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .section-header p {
+            color: rgba(255,255,255,0.5);
+            font-size: 1.1rem;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform-style: preserve-3d;
+            transition: border-color 0.3s;
+        }
+        .premium-card:hover {
+            border-color: rgba(255, 188, 0, 0.3);
+        }
+        .card-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+            background: #161b26;
+        }
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .premium-card:hover .card-img-wrapper img {
+            transform: scale(1.08);
+        }
+        .card-details {
+            padding: 25px;
+            background: linear-gradient(to top, rgba(11,15,25,1), rgba(11,15,25,0.8));
+            transform: translateZ(40px);
+            text-align: center;
+        }
+        .card-details h4 {
+            font-size: 1.25rem;
+            color: #ffbc00;
+            margin-bottom: 8px;
+        }
+        .card-details p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* --- IMMERSIVE DIGITAL WISH BOARD --- */
+        .wish-board {
+            padding: 100px 8%;
+            background: rgba(255,255,255,0.01);
+            border-top: 1px solid rgba(255,255,255,0.03);
+        }
+        .wish-box-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .form-container h3 {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            color: #ffbc00;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: #fff;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: #ffbc00;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 2px solid #ffbc00;
+            color: #ffbc00;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            background: #ffbc00;
+            color: #0b0f19;
+            box-shadow: 0 10px 20px rgba(255, 188, 0, 0.2);
+        }
+
+        .stream-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .live-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 16px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .live-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 188, 0, 0.2);
+        }
+        .live-card i {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: rgba(255, 188, 0, 0.3);
+        }
+        .live-card h5 {
+            font-size: 1.1rem;
+            color: #ffbc00;
+            margin-bottom: 8px;
+        }
+        .live-card p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.03);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 992px) {
+            .wish-box-layout { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { padding: 15px 4%; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <nav>
+        <div class="logo">ANANYA ✨</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#gallery">3D Gallery</a>
+            <a href="#wishes">Wish Board</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-glow-card" data-tilt data-tilt-max="6" data-tilt-speed="400">
+            <h1>जन्मदिन की हार्दिक शुभकामनाएं, अनन्या! 🎉</h1>
+            <h3>HAPPY BIRTHDAY, ANANYA</h3>
+            <p>Many many happy returns of the day! 🌸
+May God fill your life with happiness, love, and success. Every new day brings you new opportunities and smiles 😊✨
+Stay always happy and keep achieving your dreams.
+Wishing you a very Happy Birthday! 🎉🎂!</p>
+            <button class="btn-premium" onclick="startConfetti()">Blowing Confetti! 🥳</button>
+        </div>
+    </section>
+
+    <section id="gallery" class="showcase-section">
+        <div class="section-header">
+            <h2>The Sweet Gallery ✨</h2>
+            <p>Hover over the cards to experience premium interactive 3D perspective depth</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="premium-card" data-tilt data-tilt-max="12" data-tilt-speed="800" data-tilt-perspective="1000">
+                <div class="card-img-wrapper">
+                 <img src="image1.jpeg">
+                </div>
+                <div class="card-details">
+                    <h4>Divine Blessings</h4>
+                    <p>Beautiful day full of happiness.</p>
+                </div>
+            </div>
+
+            <div class="premium-card" data-tilt data-tilt-max="12" data-tilt-speed="800" data-tilt-perspective="1000">
+                <div class="card-img-wrapper">
+                    <img src="image 2.jpeg" alt="Moment 2">
+                </div>
+                <div class="card-details">
+                    <h4>Sweetest Smile</h4>
+                    <p>Spreading joy everywhere.</p>
+                </div>
+            </div>
+
+            <div class="premium-card" data-tilt data-tilt-max="12" data-tilt-speed="800" data-tilt-perspective="1000">
+                <div class="card-img-wrapper">
+                    <img src="image 3.jpeg" alt="Moment 3">
+                </div>
+                <div class="card-details">
+                    <h4>Angelic Vibe</h4>
+                    <p>A precious memory frozen in time.</p>
+                </div>
+            </div>
+
+            <div class="premium-card" data-tilt data-tilt-max="12" data-tilt-speed="800" data-tilt-perspective="1000">
+                <div class="card-img-wrapper">
+                    <img src="imag4.jpeg" alt="Moment 4">
+                </div>
+                <div class="card-details">
+                    <h4>Grace & Elegance</h4>
+                    <p>Shining bright like a star.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="wishes" class="wish-board">
+        <div class="section-header">
+            <h2>Digital Wish Board ✍️</h2>
+            <p>Leave a beautiful blessing and see it stream live onto the screen wall instantly</p>
+        </div>
+
+        <div class="wish-box-layout">
+            <div class="form-container">
+                <h3>Write Blessing</h3>
+                <form id="wishForm">
+                    <div class="input-group">
+                        <input type="text" id="senderName" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="senderMessage" rows="5" placeholder="Write something gorgeous..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Live Wish ❤️</button>
+                </form>
+            </div>
+
+            <div class="stream-box" id="wishesDisplay">
+                <div class="live-card">
+                    <i class="fa-solid fa-quote-right fa-2x"></i>
+                    <h5>Deepu kumar</h5>
+                    <p>Many many happy returns of the day! 🌸
+May God fill your life with happiness, love, and success. Every new day brings you new opportunities and smiles 😊✨
+Stay always happy and keep achieving your dreams.
+Wishing you a very Happy Birthday! 🎉🎂</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Made with Love & Magic for Ananya © 2026 All Rights Reserved.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        // --- Confetti Engine ---
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let confetti = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function createPiece() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                r: Math.random() * 6 + 4,
+                d: Math.random() * canvas.height,
+                color: `hsl(${Math.random() * 360}, 100%, 60%)`,
+                tilt: Math.random() * 10 - 5,
+                tiltAngleIncremental: Math.random() * 0.07 + 0.02,
+                tiltAngle: 0
+            };
+        }
+
+        function drawConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            confetti.forEach((p, index) => {
+                p.tiltAngle += p.tiltAngleIncremental;
+                p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+                p.tilt = Math.sin(p.tiltAngle - index / 3) * 15;
+
+                ctx.beginPath();
+                ctx.lineWidth = p.r;
+                ctx.strokeStyle = p.color;
+                ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
+                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
+                ctx.stroke();
+            });
+
+            confetti = confetti.filter(p => p.y < canvas.height);
+            if (confetti.length > 0) requestAnimationFrame(drawConfetti);
+        }
+
+        function startConfetti() {
+            confetti = [];
+            for (let i = 0; i < 180; i++) confetti.push(createPiece());
+            drawConfetti();
+        }
+
+        window.onload = () => { startConfetti(); };
+
+        const wishForm = document.getElementById('wishForm');
+        const wishesDisplay = document.getElementById('wishesDisplay');
+
+        wishForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('senderName').value;
+            const message = document.getElementById('senderMessage').value;
+
+            const newCard = document.createElement('div');
+            newCard.className = 'live-card';
+            newCard.style.animation = 'fadeIn 0.6s forwards';
+            newCard.innerHTML = `<i class="fa-solid fa-quote-right fa-2x"></i><h5>${name}</h5><p>${message}</p>`;
+
+            wishesDisplay.insertBefore(newCard, wishesDisplay.firstChild);
+            wishForm.reset();
+            startConfetti();
+        });
+    </script>
+</body>
+</html>
